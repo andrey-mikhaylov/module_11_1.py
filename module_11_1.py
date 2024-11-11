@@ -2,10 +2,8 @@ try:
     import requests
     import pandas as pd
     import numpy as np
-    import matplotlib
-    import matplotlib.pyplot as plt
-    import PIL
-    from PIL import Image
+    import matplotlib, matplotlib.pyplot as plt
+    import PIL, PIL.Image as Image
 except:
     print('please install libraries using:')
     print('pip install -r requirements.txt')
