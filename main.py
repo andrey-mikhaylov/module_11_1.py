@@ -1,7 +1,7 @@
 try:
     import requests
-    import pandas
-    import numpy
+    import pandas as pd
+    import numpy as np
     import matplotlib
     import PIL
 except:
@@ -15,6 +15,7 @@ import pprint
 
 def test_requests():
     print('testing requests')
+    print('version', requests.__version__)
     query1 = 'urban university'
     query2 = query1.replace(' ', '%20')
     headers = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'}
@@ -27,24 +28,30 @@ def test_requests():
 
 def test_pandas():
     print('testing pandas')
+    print('version', pd.__version__)
     mydataset = {
       'cars': ["BMW", "Volvo", "Ford"],
       'passings': [3, 7, 2]
     }
-    myvar = pandas.DataFrame(mydataset)
+    myvar = pd.DataFrame(mydataset)
     print(myvar)
 
 
 def test_numpy():
     print('testing numpy')
+    print('version', np.__version__)
+    arr = np.array([1, 2, 3, 4, 5])
+    print(arr)
 
 
 def test_matplotlib():
     print('testing matplotlib')
+    print('version', matplotlib.__version__)
 
 
 def test_pillow():
     print('testing pillow')
+    print('version', PIL.__version__)
 
 
 if __name__ == '__main__':
