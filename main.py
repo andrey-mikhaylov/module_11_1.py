@@ -3,7 +3,10 @@ try:
     import pandas as pd
     import numpy as np
     import matplotlib
+    import matplotlib.pyplot as plt
     import PIL
+    from PIL import Image
+
 except:
     print('please install libraries using:')
     print('pip install -r requirements.txt')
@@ -47,11 +50,16 @@ def test_numpy():
 def test_matplotlib():
     print('testing matplotlib')
     print('version', matplotlib.__version__)
+    plt.plot([1, 2, 3, 4])
+    plt.ylabel('some numbers')
+    plt.show()
 
 
 def test_pillow():
     print('testing pillow')
     print('version', PIL.__version__)
+    image = Image.new('RGB', (100, 100), (255,0,0))
+    image.show()
 
 
 if __name__ == '__main__':
